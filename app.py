@@ -29,16 +29,14 @@ def predict():
             'Partner'         : f.get('Partner', 'No'),
             'Dependents'      : f.get('Dependents', 'No'),
             'PhoneService'    : f.get('PhoneService', 'No'),
-            'MultipleLines'   : f.get('MultipleLines', 'No','No phone service'),
+            'MultipleLines'   : f.get('MultipleLines', 'No'),
             'InternetService' : f.get('InternetService', 'No'),
-
-            'OnlineSecurity'  : f.get('OnlineSecurity', 'No','No internet service'),
-            'OnlineBackup'    : f.get('OnlineBackup', 'No','No internet service'),
-            'DeviceProtection': f.get('DeviceProtection', 'No','No internet service'),
+            'OnlineSecurity'  : f.get('OnlineSecurity', 'No'),
+            'OnlineBackup'    : f.get('OnlineBackup', 'No'),
+            'DeviceProtection': f.get('DeviceProtection', 'No'),
             'TechSupport'     : f.get('TechSupport', 'No'),
             'StreamingTV'     : f.get('StreamingTV', 'No'),
             'StreamingMovies' : f.get('StreamingMovies', 'No'),
-
             'PaperlessBilling': f.get('PaperlessBilling', 'No'),
             'PaymentMethod'   : f.get('PaymentMethod', 'Electronic check'),
             'Contract'        : f.get('Contract', 'Month-to-month'),
@@ -64,7 +62,6 @@ def predict():
 
         df['Contract_con'] = CONTRACT_MAP.get(f.get('Contract', 'Month-to-month'), 0)
         df.drop(columns=['Contract'], inplace=True)
-
         df['sim'] = SIM_MAP.get(f.get('sim', 'Jio'), 0)
 
         sc_cols = ['MonthlyCharges_qan_quantiles','TotalCharges_KNN_imp_qan_quantiles']
@@ -76,11 +73,21 @@ def predict():
         df = df[final_cols]
 
         pred = model.predict(df)[0]
-        msg = "Customer Will Stay" if pred == 0 else "Customer Likely to Churn"
+        msg = "✅ Customer Will Stay" if pred == 0 else "⚠️ Customer Likely to Churn"
 
         return render_template("index.html", prediction_text=msg, selected_sim=f.get('sim','Jio'))
     except Exception as e:
         return render_template("index.html", prediction_text=f"Error: {e}", selected_sim=f.get('sim','Jio'))
+
+
+@app.route("/about_developer")
+def about_developer():
+    return render_template("about_developer.html")
+
+
+@app.route("/about_model")
+def about_model():
+    return render_template("about_model.html")
 
 
 if __name__ == "__main__":

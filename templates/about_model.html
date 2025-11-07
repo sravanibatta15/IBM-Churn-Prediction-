@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Model</title>
+<style>
+body{font-family:Poppins,sans-serif;background:#eef2f7;color:#1d2433;margin:0;padding:40px;}
+.card{max-width:800px;margin:auto;background:#fff;padding:30px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);}
+h2{text-align:center;color:#0d6efd;}
+h3{color:#0d6efd;margin-top:25px;}
+p,li{font-size:15px;line-height:1.6;}
+.back{display:inline-block;margin-top:20px;background:#0d6efd;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>About the Machine Learning Model</h2>
+
+  <p>
+    This Customer Churn Prediction system uses a <strong>Gradient Boosting Classifier</strong>
+    trained on a telecom customer dataset to identify customers likely to discontinue their service.
+  </p>
+
+  <h3>Model Workflow</h3>
+  <ul>
+    <li>Data preprocessing with missing value handling and standardization using <strong>StandardScaler</strong>.</li>
+    <li>Categorical features encoded using <strong>One-Hot Encoding</strong>.</li>
+    <li>Numeric columns like <em>MonthlyCharges</em> and <em>TotalCharges</em> are normalized for model stability.</li>
+    <li>The model predicts binary output: 0 → Customer stays, 1 → Customer churns.</li>
+  </ul>
+
+  <h3>Features Used</h3>
+  <ul>
+    <li>Demographics: Gender, SeniorCitizen, Partner, Dependents</li>
+    <li>Services: PhoneService, InternetService, OnlineBackup, TechSupport, etc.</li>
+    <li>Billing & Contract: PaymentMethod, Contract, PaperlessBilling</li>
+    <li>Numerical: MonthlyCharges, TotalCharges</li>
+  </ul>
+
+  <h3>Purpose</h3>
+  <p>
+    The model assists telecom companies in <strong>retaining customers</strong> by identifying high-risk customers
+    and enabling proactive retention strategies.
+  </p>
+
+  <a href="/" class="back">← Back to Home</a>
+</div>
+</body>
+</html>

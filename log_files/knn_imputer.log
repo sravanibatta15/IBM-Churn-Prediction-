@@ -1,0 +1,11 @@
+2025-11-06 17:14:06,838 - INFO - Standard Deviation BEFORE imputation (TotalCharges): 2270.5482
+2025-11-06 17:14:06,838 - INFO - Standard Deviation AFTER imputation (TotalCharges): 2269.6498
+2025-11-06 17:14:06,838 - INFO - <class 'pandas.core.frame.DataFrame'>
+2025-11-06 17:14:06,838 - INFO - <class 'pandas.core.frame.DataFrame'>
+2025-11-06 17:14:06,838 - INFO - Knn checkIndex(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'TotalCharges', 'JoinYear', 'sim',
+       'TotalCharges_KNN_imp'],
+      dtype='object')

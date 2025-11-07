@@ -1,0 +1,76 @@
+2025-11-06 17:14:23,175 - INFO - faff:sim                                      0
+gender_Male                              0
+Partner_Yes                              0
+Dependents_Yes                           0
+PhoneService_Yes                         0
+MultipleLines_No phone service           0
+MultipleLines_Yes                        0
+InternetService_Fiber optic              0
+InternetService_No                       0
+OnlineSecurity_No internet service       0
+OnlineSecurity_Yes                       0
+OnlineBackup_No internet service         0
+OnlineBackup_Yes                         0
+DeviceProtection_No internet service     0
+DeviceProtection_Yes                     0
+TechSupport_No internet service          0
+TechSupport_Yes                          0
+StreamingTV_No internet service          0
+StreamingTV_Yes                          0
+StreamingMovies_No internet service      0
+StreamingMovies_Yes                      0
+PaperlessBilling_Yes                     0
+PaymentMethod_Credit card (automatic)    0
+PaymentMethod_Electronic check           0
+PaymentMethod_Mailed check               0
+Contract_con                             0
+SeniorCitizen                            0
+dtype: int64
+2025-11-06 17:14:23,184 - INFO - Chi score data frame :
+                                  Features   Chi_score       p values
+25                           Contract_con  892.723082  3.747507e-196
+23         PaymentMethod_Electronic check  325.745619   8.117366e-73
+7             InternetService_Fiber optic  301.649287   1.440292e-67
+13   DeviceProtection_No internet service  232.067804   2.110560e-52
+15        TechSupport_No internet service  232.067804   2.110560e-52
+19    StreamingMovies_No internet service  232.067804   2.110560e-52
+17        StreamingTV_No internet service  232.067804   2.110560e-52
+8                      InternetService_No  232.067804   2.110560e-52
+11       OnlineBackup_No internet service  232.067804   2.110560e-52
+9      OnlineSecurity_No internet service  232.067804   2.110560e-52
+10                     OnlineSecurity_Yes  115.205660   7.094483e-27
+16                        TechSupport_Yes  112.802471   2.383786e-26
+26                          SeniorCitizen  101.795764   6.155165e-24
+3                          Dependents_Yes  100.123252   1.432024e-23
+21                   PaperlessBilling_Yes   86.882248   1.151786e-20
+22  PaymentMethod_Credit card (automatic)   80.499995   2.907057e-19
+2                             Partner_Yes   55.983999   7.306323e-14
+24             PaymentMethod_Mailed check   31.319898   2.188254e-08
+12                       OnlineBackup_Yes   25.195698   5.179762e-07
+18                        StreamingTV_Yes   13.629203   2.226944e-04
+14                   DeviceProtection_Yes   13.251443   2.723702e-04
+20                    StreamingMovies_Yes   10.166543   1.430122e-03
+6                       MultipleLines_Yes    4.340350   3.721928e-02
+5          MultipleLines_No phone service    0.630450   4.271903e-01
+0                                     sim    0.509928   4.751700e-01
+1                             gender_Male    0.209965   6.467950e-01
+4                        PhoneService_Yes    0.067243   7.953940e-01
+2025-11-06 17:14:23,186 - INFO - Removed columns: ['MultipleLines_No phone service', 'gender_Male', 'PhoneService_Yes']
+2025-11-06 17:14:23,192 - INFO - Anova score data frame:
+                             Features  anova_score       p values
+0                            JoinYear   692.167643  5.583048e-144
+2  TotalCharges_KNN_imp_qan_quantiles   303.218222   3.461772e-66
+1        MonthlyCharges_qan_quantiles   157.516551   1.179856e-35
+2025-11-06 17:14:23,193 - INFO - Removed columns anova: []
+2025-11-06 17:14:23,258 - INFO - T-test results:
+                             Features     t_stat        p_value
+0                            JoinYear  29.111789  2.638563e-166
+2  TotalCharges_KNN_imp_qan_quantiles  17.577641   1.230966e-65
+1        MonthlyCharges_qan_quantiles -14.127230   4.152897e-44
+2025-11-06 17:14:23,260 - INFO - Removed columns t-test: []
+2025-11-06 17:14:23,261 - INFO - JoinYear----->-0.3308292951987611
+2025-11-06 17:14:23,261 - INFO - ['JoinYear']
+2025-11-06 17:14:23,262 - INFO - MonthlyCharges_qan_quantiles----->0.16494606038413126
+2025-11-06 17:14:23,262 - INFO - ['JoinYear', 'MonthlyCharges_qan_quantiles']
+2025-11-06 17:14:23,262 - INFO - TotalCharges_KNN_imp_qan_quantiles----->-0.22602647019782643
+2025-11-06 17:14:23,263 - INFO - ['JoinYear', 'MonthlyCharges_qan_quantiles', 'TotalCharges_KNN_imp_qan_quantiles']

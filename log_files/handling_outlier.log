@@ -1,0 +1,11 @@
+2025-11-06 17:14:19,711 - INFO - Capping using QUANTILES Winsorizer completed successfully.
+2025-11-06 17:14:19,712 - INFO - train:Index(['SeniorCitizen', 'MonthlyCharges', 'TotalCharges', 'JoinYear',
+       'TotalCharges_KNN_imp', 'MonthlyCharges_qan',
+       'TotalCharges_KNN_imp_qan', 'MonthlyCharges_qan_quantiles',
+       'TotalCharges_KNN_imp_qan_quantiles'],
+      dtype='object')
+2025-11-06 17:14:19,712 - INFO - test:Index(['SeniorCitizen', 'MonthlyCharges', 'TotalCharges', 'JoinYear',
+       'TotalCharges_KNN_imp', 'MonthlyCharges_qan',
+       'TotalCharges_KNN_imp_qan', 'MonthlyCharges_qan_quantiles',
+       'TotalCharges_KNN_imp_qan_quantiles'],
+      dtype='object')

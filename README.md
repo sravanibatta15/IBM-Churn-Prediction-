@@ -92,7 +92,7 @@ These insights help telecom operators plan better **retention strategies**.
 
 ---
 
-## 👤 Author
+## 👤 Support
 
 **Name:** Batta Siva Sai Sravani  
 📧 Email: **sivasaisravani@gmail.com**  
